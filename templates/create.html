@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body style="background-color: #f2f2f2; font-family: Arial, sans-serif; text-align: center;">
+
+    <h1 style="color: #333;">User Registration</h1>
+
+    <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); width: 500px; margin: 0 auto;">
+
+        <h2 style="color: #333;">Create an Account</h2>
+
+        <form action="/createAccount" method="POST" style="text-align: left; padding-right: 20px;">
+            <label for="username">First Name:</label><br>
+            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="email"> Surname:</label><br>
+            <input type="text" id="surname" name="surname" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="confirm-password">Confirm Password:</label><br>
+            <input type="password" id="confirm-password" name="confirm-password" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="username">Reg Number:</label><br>
+            <input type="text" id="reg_number" name="reg_number" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="username">Level:</label><br>
+            <input type="text" id="level" name="level" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="username">Department:</label><br>
+            <input type="text" id="department" name="department" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="username">Faculty:</label><br>
+            <input type="text" id="faculty" name="faculty" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+
+            <input type="submit" value="Register" style="background-color: #007BFF; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+    </div>
+
+</body>
+</html>

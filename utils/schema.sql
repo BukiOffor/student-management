@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS students;
+
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    reg_number TEXT NOT NULL,
+    password TEXT NOT NULL,
+    level INTEGER NOT NULL,
+    department TEXT NOT NULL,
+    faculty TEXT NOT NULL,
+    name TEXT NOT NULL,
+    surname TEXT NOT NULL
+);

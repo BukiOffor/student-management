@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS courses;
+
+CREATE TABLE courses (
+    reg_number TEXT NOT NULL PRIMARY KEY,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    course1 TEXT NOT NULL,
+    course2 INTEGER NOT NULL,
+    course3 TEXT NOT NULL,
+    course4 TEXT NOT NULL,
+    course5 TEXT NOT NULL,
+    name TEXT NOT NULL
+);

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .welcome-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .course-card {
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: calc(33.33% - 20px);
+        }
+        
+    </style>
+</head>
+<body>
+    {% if has_courses %}
+    <div class="header">
+        <h1>Welcome, {{has_courses[7]}}</h1>
+    </div>
+
+    <div class="container">
+        <div class="welcome-message">
+            <p>Welcome to your student dashboard. Here are your enrolled courses:</p>
+        </div>
+
+        <div class="courses">
+            <div class="course-card">
+                <h2>{{has_courses[2]}}</h2>
+                <p>Instructor: Prof. Smith</p>
+            </div>
+
+            <div class="course-card">
+                <h2>{{has_courses[3]}}</h2>
+                <p>Instructor: Prof. Johnson</p>
+            </div>
+
+            <div class="course-card">
+                <h2>{{has_courses[4]}}</h2>
+                <p>Instructor: Prof. Micheal</p>
+            </div>
+
+            <div class="course-card">
+                <h2>{{has_courses[5]}}</h2>
+                <p>Instructor: Prof. Okeke</p>
+            </div>
+            <div class="course-card">
+                <h2>{{has_courses[6]}}</h2>
+                <p>Instructor: Prof. Brown</p>
+            </div>
+            <!-- Add more course cards as needed -->
+        </div>
+    </div>
+
+    {% else %}
+    
+    <h1 style="color: #333;">Course Registration</h1>
+
+    <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); width: 500px; margin: 0 auto;">
+
+        <form action="/registerCourse" method="POST" style="text-align: left; padding-right: 20px;">
+
+            <label for="courseCode" style="font-weight: bold;">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="e g. John Doe" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="studentName" style="font-weight: bold;">Registration Number:</label><br>
+            <input type="text" id="reg_number" name="reg_number" placeholder="e g. 2014/123/105" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="courseName" style="font-weight: bold;">Course 1:</label><br>
+            <input type="text" id="course1" name="course1" placeholder="e g. Maths 101" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="courseCode" style="font-weight: bold;">Course 2:</label><br>
+            <input type="text" id="course2" name="course2" placeholder="e g. GST 108" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="courseCode" style="font-weight: bold;">Course 3:</label><br>
+            <input type="text" id="course3" name="course3" placeholder="e g. BIO 204" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+            
+            <label for="courseCode" style="font-weight: bold;">Course 4:</label><br>
+            <input type="text" id="course4" name="course4" placeholder="e g. STATS 444" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <label for="courseCode" style="font-weight: bold;">Course 5:</label><br>
+            <input type="text" id="course5" name="course5" placeholder="e g. HIS 744" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+            <input type="submit" value="Register" style="background-color: #007BFF; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+    </div>
+    {% endif %}
+
+
+
+   
+
+</body>
+</html>
